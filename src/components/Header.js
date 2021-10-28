@@ -1,12 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect }  from 'react'
 import {FaQuoteLeft, FaQuoteRight} from 'react-icons/fa'
 import { IconContext } from "react-icons";
-import Hero from '../images/hero.png'
-import card1 from '../images/card4.png'
+import Data from '../Data';
+import Hero from '../images/hero.png';
+import card1 from '../images/card4.png';
 import card2 from '../images/card1.png'
 import card3 from '../images/card2.png'
 
 const Header = () => {
+  const [people, setPeople] = useState(Data);
+  const [index, setIndex] = React.useState(0);
+
+  useEffect(() => {
+    const lastIndex = people.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, people]);
+
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 5000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
+
     return (
       <>
         <IconContext.Provider value={{ color: "#FF6634" }}>
@@ -49,11 +72,31 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <img
-                src={Hero}
-                alt=''
-                className=' z-30 h-full w-full absolute top-0 '
-              />
+              <div>
+                {people.map((person,personIndex) => {
+                  const {id, image} = person;
+
+                  let position = 'nextSlide'
+                  if(personIndex === index){
+                    position = 'activeSlide'
+                  }
+                  if(
+                    personIndex === index -1 || 
+                    (index === 0 && personIndex === people.length -1)
+                  ){
+                    position ='lastSlide'
+                  }
+                  // return (
+                  //   <article className = {position} key ={id}>
+                  //     <img src={image} alt='' className='person-img'/>
+                  //   </article>
+                  // )
+                })}
+              </div>
+              
+              
+              
+              
               <img
                 src={card1}
                 alt=''

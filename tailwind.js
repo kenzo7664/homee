@@ -20,6 +20,13 @@ module.exports = {
       transparent: "transparent",
       current: "currentColor",
       lgray: "#FED5FE",
+      grwy:"#F8F8F8",
+      lpink:"#FFEBFF",
+      drkgray:"#1F2131",
+      lblack:"#393C4D",
+      lwhite:"#FFFFFF",
+      
+      
 
       black: colors.black,
       white: colors.white,
