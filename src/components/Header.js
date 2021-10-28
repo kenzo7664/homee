@@ -6,6 +6,7 @@ import Hero from '../images/hero.png';
 import card1 from '../images/card4.png';
 import card2 from '../images/card1.png'
 import card3 from '../images/card2.png'
+import '../assets/small.css'
 
 const Header = () => {
   const [people, setPeople] = useState(Data);
@@ -24,7 +25,7 @@ const Header = () => {
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(index + 1);
-    }, 5000);
+    }, 3000);
     return () => {
       clearInterval(slider);
     };
@@ -33,7 +34,7 @@ const Header = () => {
     return (
       <>
         <IconContext.Provider value={{ color: "#FF6634" }}>
-          <div className='flex justify-around ms:flex-col ms:p-4 bg-red-200'>
+          <div className='flex justify-around ms:flex-col ms:p-4 md:pl-1 bg-red-200'>
             <div className='mt-10'>
               <h1 className='font-bold text-4xl  md:w-96 '>
                 Grow your business with real-time reviews
@@ -42,7 +43,7 @@ const Header = () => {
                 Find out more on what people are saying about your company with
                 real time review and data
               </h2>
-              <form className='flex flex-row border p-2 bg-white border-grey-100'>
+              <form className='flex flex-row border w-auto p-2 bg-white border-grey-100'>
                 <input
                   type='text'
                   placeholder='Search for companies'
@@ -59,21 +60,40 @@ const Header = () => {
                 </a>
               </h2>
               <div className='text-sm md:w-96  mt-16 relative'>
-                <FaQuoteLeft />A life spent making mistakes is not only more
-                honorable, but more useful than a life spent doing nothing.
-                <FaQuoteRight className='absolute md:top-10 md:right-24  ' />
+                
+                {
+                  people.map((quot, quotIndex)=>{
+                   const {id, quote} = quot
+                  
+                   let pos = 'nextSlide'
+                  if(quotIndex === index){
+                    pos = 'activeSlide'
+                  }
+                  if(
+                    quotIndex === index -1 || 
+                    (index === 0 && quotIndex === people.length -1)
+                  ){
+                    pos ='lastSlide'
+                  }
+                  return (
+                    // <article className={pos} key={id}>
+                    <div className={pos}  key={id}>
+                      <FaQuoteLeft />
+                      <span className=''>{quote}</span>
+                      <FaQuoteRight  />
+                    </div>
+                    // </article>
+                  );
+                })}
+               
               </div>
             </div>
             <div className='relative'>
-              <div className='border border-lgray w-full h-full  rounded-full '>
-                <div className='border border-lgray w-5/6 h-5/6 m-8 rounded-full'>
-                  <div className='border border-lgray w-4/5 h-4/5 m-8 rounded-full'>
-                    <div className='border border-lgray w-48 ms:w-3/4 mv:w-5/6 h-48 m-8 rounded-full'></div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                {people.map((person,personIndex) => {
+              <div className='border border-lgray w-auto h-auto  rounded-full '>
+                <div className='border border-lgray w-auto h-auto m-8 rounded-full'>
+                  <div className='border border-lgray w-auto h-auto m-8 rounded-full relative'>
+                    <div className='border border-lgray w-48 ms:w-3/4 mv:w-auto h-48 m-8 rounded-full relative'>
+                      {people.map((person,personIndex) => {
                   const {id, image} = person;
 
                   let position = 'nextSlide'
@@ -86,12 +106,18 @@ const Header = () => {
                   ){
                     position ='lastSlide'
                   }
-                  // return (
-                  //   <article className = {position} key ={id}>
-                  //     <img src={image} alt='' className='person-img'/>
-                  //   </article>
-                  // )
+                  return (
+                    <article className = {position} key ={id}>
+                      <img src={image} alt='' className='person-img'/>
+                    </article>
+                  )
                 })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                
               </div>
               
               
