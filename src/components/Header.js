@@ -34,7 +34,7 @@ const Header = () => {
     return (
       <>
         <IconContext.Provider value={{ color: "#FF6634" }}>
-          <div className='flex justify-around ms:flex-col ms:p-4 md:pl-1 bg-red-200'>
+          <div className='flex justify-around ms:flex-col ms:p-4 md:pl-1 bg-lpink'>
             <div className='mt-10'>
               <h1 className='font-bold text-4xl  md:w-96 '>
                 Grow your business with real-time reviews
