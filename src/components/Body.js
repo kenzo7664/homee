@@ -12,10 +12,10 @@ const Body = () => {
         <>
            <div className="text-black">
                 <h1 className='font-bold text-4xl text-center pt-10'>Featured Reviews</h1> 
-                <div className='text-sm text-center '>
+                <div className='text-sm text-center p-2 '>
                   Here are some of the review been done by some of the employees on this platform.   
                 </div>
-                <div className="grid grid-cols-1 gap-4 p-32 ms:p-10 mv:p-24 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-4 p-32 ms:p-10 mv:p-24 md:grid-cols-2 lg:grid-cols-3 lg:pl-32">
                     <img src={reviewcard1} alt="" />
                     <img src={reviewcard2} alt="" />
                     <img src={reviewcard3} alt="" />

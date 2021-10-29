@@ -11,20 +11,20 @@ const Advert = () => {
     return (
         <>
             <div className="pb-20">
-                <div className="grid grid-cols-5 pl-12 pr-10 ms:pl-2 ms:pr-2 ms:grid-cols-2">
+                <div className="grid grid-cols-5 pl-12 pr-10 ms:pl-2 ms:pr-2 ms:grid-cols-2 lg:pl-36">
                     <img src={ebay} alt="" />
                     <img src={linkein} alt="" />
                    <img src={indeed} alt="" />
                    <img src={godaddy} alt="" />
                    <img src={monster} alt="" />
                 </div>
-                <div className="grid grid-cols-3 p-20 ms:grid-cols-1 ms:p-10 ms:gap-y-4 mv:p-20 md:gap-x-4">
+                <div className="grid grid-cols-3 p-20 ms:grid-cols-1 ms:p-10  ms:gap-y-4 mv:p-20 md:gap-x-4 lg:pl-36">
                     <img src={ad} alt="" />
                     <img src={ad} alt="" />
                     <img src={ad} alt="" />
                 </div>
                 <div className="bg-lpink ml-28 mr-28 flex justify-around ms:flex-col ms:ml-8 ms:mr-8  mv:ml-20 mv:mr-20 ">
-                    <h1 className="text-lg font-semibold pt-20 md:pl-8 md:pb-8 md:w-96 ms:p-8">
+                    <h1 className="text-lg font-semibold pt-20 md:pl-8 md:pb-8 sm:pb-8 sm:pl-8 md:w-96 ms:p-8">
                         Get started today sign up
                         and start reveiwing business.
                     </h1>

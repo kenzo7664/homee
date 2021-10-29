@@ -1,44 +1,54 @@
 import React from 'react'
 import {FaFacebookF,FaTwitter,FaLinkedinIn} from 'react-icons/fa'
+import { IconContext } from "react-icons";
 
 const Footer = () => {
     return (
         <>
-         <div className="bg-drkgray flex justify-around pt-20 pb-20 ">
+        <IconContext.Provider value={{ color: "#FFF" }}>
+         <div className="bg-drkgray flex justify-around pt-20 pb-10 ms:flex-col ms:p-5 ">
              <div className ="flex flex-col">
-                 <h1 className="text-white text-sm md:w-96">
+                 <h1 className="text-white text-sm md:w-96 md:pt-8">
                      This platform for minority groups to express their
                      opinions on employment, workplace experiences and rate employers.
                  </h1>
-                 <div className="flex flex-row ">
-                    <div className="border border-lblack w-8 h-8 rounded-full mr-2"><FaFacebookF className ="ml-2 mt-2"/></div>
-                    <div className="border border-lblack w-8 h-8 rounded-full mr-2"><FaTwitter className="ml-2 mt-2"/></div>
+                 <div className="flex flex-row md:pt-5  ms:hidden    ">
+                    <div className="border border-lblack w-8 h-8 rounded-full mr-2 ms:mr-0"><FaFacebookF className ="ml-2 mt-2"/></div>
+                    <div className="border border-lblack w-8 h-8 rounded-full mr-2 ms:mr-0"><FaTwitter className="ml-2 mt-2"/></div>
                     <div className="border border-lblack w-8 h-8 rounded-full"><FaLinkedinIn className="ml-2 mt-2"/></div>
                  </div>
-                 <span className="text-lwhite text-xs">Copyright 2021</span>
+                 <span className="text-lwhite text-xs md:pt-20 ms:hidden">Copyright 2021</span>
              </div>
-             <div className="flex flex-col text-white">
-                <h1 className="font-semibold text lg">Company</h1>
-                <a href="#" className="text-xs font-thin">About Us</a>
-                <a href="#" className="text-xs font-thin">Contact Us</a>
-                <a href="#" className="text-xs font-thin">Terms</a>
+             
+             <div className="flex flex-col text-white ms:text-center ms:mt-3">
+                <h1 className="font-semibold text lg ">Company</h1>
+                <a href="#" className="text-xs font-thin leading-5">About Us</a>
+                <a href="#" className="text-xs font-thin leading-5">Contact Us</a>
+                <a href="#" className="text-xs font-thin leading-5">Terms</a>
                 <a href="#" className="text-xs font-thin">Privacy Policy</a>
              </div>
-             <div className="flex flex-col text-white">
+             <div className="flex flex-col text-white ms:text-center ms:mt-3">
                 <h1 className="font-semibold text lg">Features</h1>
-                <a href="#" className="text-xs font-thin">Timeline</a>
-                <a href="#" className="text-xs font-thin">Peer Review</a>
-                <a href="#" className="text-xs font-thin">Create Account</a>
+                <a href="#" className="text-xs font-thin leading-5">Timeline</a>
+                <a href="#" className="text-xs font-thin leading-5">Peer Review</a>
+                <a href="#" className="text-xs font-thin leading-5">Create Account</a>
                 <a href="#" className="text-xs font-thin">Sign in</a>
              </div>
-             <div className="flex flex-col text-white">
+             <div className="flex flex-col text-white ms:text-center ms:mt-3">
                 <h1 className="font-semibold text lg">Contact Us</h1>
-                <a href="#" className="text-xs font-thin">inquiry@thaapp.com</a>
-                <a href="#" className="text-xs font-thin">1-800-200-300</a>
-                <a href="#" className="text-xs font-thin">54, Curragh birin</a>
+                <a href="#" className="text-xs font-thin leading-5">inquiry@thaapp.com</a>
+                <a href="#" className="text-xs font-thin leading-5">1-800-200-300</a>
+                <a href="#" className="text-xs font-thin leading-5">54, Curragh birin</a>
                 <a href="#" className="text-xs font-thin">Ireland</a>
              </div>
+             <div className="flex flex-row md:pt-5  md:hidden    ">
+                    <div className="border border-lblack w-8 h-8 rounded-full mr-2 ms:mr-0"><FaFacebookF className ="ml-2 mt-2"/></div>
+                    <div className="border border-lblack w-8 h-8 rounded-full mr-2 ms:mr-0"><FaTwitter className="ml-2 mt-2"/></div>
+                    <div className="border border-lblack w-8 h-8 rounded-full"><FaLinkedinIn className="ml-2 mt-2"/></div>
+             </div>
+             <span className="text-lwhite text-xs md:pt-20 ms:text-right md:hidden">Copyright 2021</span>
          </div>   
+        </IconContext.Provider>
         </>
     )
 }

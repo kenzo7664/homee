@@ -11,14 +11,14 @@ const people = [
     image:
       "https://media.istockphoto.com/photos/thoughtful-man-against-black-background-picture-id1062507418?b=1&k=20&m=1062507418&s=170667a&w=0&h=gPnVIalqmlDAzei0Ekc70XTuJFC1UVdYH4paPZYc7Fw=",
     quote:
-      "A boy spent some money is not only more honorable, but more useful than a life spent doing nothing.",
+      "Google has not only reached but surpassed the 1 billion dollar evaluation mark.",
   },
   {
     id: 3,
     image:
       "https://media.istockphoto.com/photos/money-coin-in-hand-black-and-white-photo-on-black-background-black-picture-id1280271345?b=1&k=20&m=1280271345&s=170667a&w=0&h=BMfO6vZSynRANrEIvkUDuQfR4Sdku-4uXt24QABf5T0=",
     quote:
-      "live life spent to mistakes is not more honorable, but more powerful than a life spent playing games.",
+      "Father hold me close Dont let me down",
   },
   {
     id: 4,
