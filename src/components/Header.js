@@ -8,7 +8,7 @@ import card3 from '../images/card2.png'
 import '../assets/small.css'
 
 const Header = () => {
-  const [people, setPeople] = useState(Data);
+  const [people] = useState(Data);
   const [index, setIndex] = React.useState(0);
 
   useEffect(() => {
@@ -24,6 +24,7 @@ const Header = () => {
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(index + 1);
+      
     }, 3000);
     return () => {
       clearInterval(slider);
