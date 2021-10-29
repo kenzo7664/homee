@@ -43,7 +43,7 @@ const Header = () => {
                 Find out more on what people are saying about your company with
                 real time review and data
               </h2>
-              <form className='flex flex-row border w-auto p-2 bg-white border-grey-100'>
+              <form className='flex flex-row border w-auto p-2 mt-2 bg-white border-grey-100'>
                 <input
                   type='text'
                   placeholder='Search for companies'
