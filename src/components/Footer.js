@@ -22,24 +22,24 @@ const Footer = () => {
              
              <div className="flex flex-col text-white ms:text-center ms:mt-3">
                 <h1 className="font-semibold text lg ">Company</h1>
-                <a href="#" className="text-xs font-thin leading-5">About Us</a>
-                <a href="#" className="text-xs font-thin leading-5">Contact Us</a>
-                <a href="#" className="text-xs font-thin leading-5">Terms</a>
-                <a href="#" className="text-xs font-thin">Privacy Policy</a>
+                <a href="/" className="text-xs font-thin leading-5">About Us</a>
+                <a href="/" className="text-xs font-thin leading-5">Contact Us</a>
+                <a href="/" className="text-xs font-thin leading-5">Terms</a>
+                <a href="/" className="text-xs font-thin">Privacy Policy</a>
              </div>
              <div className="flex flex-col text-white ms:text-center ms:mt-3">
                 <h1 className="font-semibold text lg">Features</h1>
-                <a href="#" className="text-xs font-thin leading-5">Timeline</a>
-                <a href="#" className="text-xs font-thin leading-5">Peer Review</a>
-                <a href="#" className="text-xs font-thin leading-5">Create Account</a>
-                <a href="#" className="text-xs font-thin">Sign in</a>
+                <a href="/" className="text-xs font-thin leading-5">Timeline</a>
+                <a href="/" className="text-xs font-thin leading-5">Peer Review</a>
+                <a href="/" className="text-xs font-thin leading-5">Create Account</a>
+                <a href="/" className="text-xs font-thin">Sign in</a>
              </div>
              <div className="flex flex-col text-white ms:text-center ms:mt-3">
                 <h1 className="font-semibold text lg">Contact Us</h1>
-                <a href="#" className="text-xs font-thin leading-5">inquiry@thaapp.com</a>
-                <a href="#" className="text-xs font-thin leading-5">1-800-200-300</a>
-                <a href="#" className="text-xs font-thin leading-5">54, Curragh birin</a>
-                <a href="#" className="text-xs font-thin">Ireland</a>
+                <p className="text-xs font-thin leading-5">inquiry@thaapp.com</p>
+                <p className="text-xs font-thin leading-5">1-800-200-300</p>
+                <p className="text-xs font-thin leading-5">54, Curragh birin</p>
+                <p className="text-xs font-thin">Ireland</p>
              </div>
              <div className="flex flex-row md:pt-5  md:hidden    ">
                     <div className="border border-lblack w-8 h-8 rounded-full mr-2 ms:mr-0"><FaFacebookF className ="ml-2 mt-2"/></div>

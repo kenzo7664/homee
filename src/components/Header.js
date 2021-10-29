@@ -2,7 +2,6 @@ import React, { useState, useEffect }  from 'react'
 import {FaQuoteLeft, FaQuoteRight} from 'react-icons/fa'
 import { IconContext } from "react-icons";
 import Data from '../Data';
-import Hero from '../images/hero.png';
 import card1 from '../images/card4.png';
 import card2 from '../images/card1.png'
 import card3 from '../images/card2.png'
@@ -55,7 +54,7 @@ const Header = () => {
               </form>
               <h2 className='text-lg'>
                 Already have an account ?
-                <a href='#' className='text-red-500 pl-2'>
+                <a href='/' className='text-red-500 pl-2'>
                   Sign in
                 </a>
               </h2>
